@@ -8,7 +8,8 @@
     "build": "lerna run build",
     "bootstrap": "lerna bootstrap",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "lerna-publish": "lerna publish"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
