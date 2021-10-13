@@ -1,0 +1,18 @@
+{
+  "name": "@echon/components",
+  "version": "1.0.0",
+  "description": "React Component Library",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "rimraf lib && rollup -c ../../rollup.config.js"
+  },
+  "author": "Brian Nunez",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^17.0.2"
+  }
+}
