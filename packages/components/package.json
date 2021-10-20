@@ -11,8 +11,16 @@
     "build": "rimraf lib && rollup -c ../../rollup.config.js"
   },
   "author": "Brian Nunez",
-  "license": "ISC",
+  "license": "MIT",
   "peerDependencies": {
-    "react": "^17.0.2"
+    "react": "^17.0.2",
+    "prop-types": "^15.7.2"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@emotion/css": "^10.0.27",
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^10.0.27",
+    "react-icons": "^4.3.1"
   }
 }
