@@ -6,7 +6,7 @@ const {
 } = React;
 
 export default {
-  title: '@echon/components/Wizard',
+  title: '@brian-nunez/components/Wizard',
   component: Wizard,
   args: {},
   argTypes: {

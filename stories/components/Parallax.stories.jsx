@@ -7,7 +7,7 @@ const ExampleChild = () => (
 );
 
 export default {
-  title: '@echon/components/Parallax',
+  title: '@brian-nunez/components/Parallax',
   component: Parallax,
   args: {
     backgroundImage: 'https://i.picsum.photos/id/1033/1000/1000.jpg?hmac=Ue-YDym-IHTm9TBvlPKHTND97RMFHY-9trNGP2tFP28', // Example Image

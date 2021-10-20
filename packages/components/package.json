@@ -1,5 +1,5 @@
 {
-  "name": "@echon/components",
+  "name": "@brian-nunez/components",
   "version": "1.0.0",
   "description": "React Component Library",
   "main": "lib/cjs/index.js",
@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/brian-nunez/echon.git"
+    "url": "git+ssh://git@github.com/brian-nunez/brian-nunez.git"
   },
   "keywords": [
     "react",
@@ -36,7 +36,7 @@
     "emotion"
   ],
   "bugs": {
-    "url": "https://github.com/brian-nunez/echon/issues"
+    "url": "https://github.com/brian-nunez/brian-nunez/issues"
   },
-  "homepage": "https://github.com/brian-nunez/echon#readme"
+  "homepage": "https://github.com/brian-nunez/brian-nunez#readme"
 }

@@ -5,7 +5,7 @@ The `<Parallax />` component allows you provide a parallax effect in a quick and
 ## Usage
 
 ```javascript
-import { Parallax } from '@echon/components';
+import { Parallax } from '@brian-nunez/components';
 
 function App() {
   return (

@@ -1,5 +1,5 @@
 {
-  "name": "echon",
+  "name": "brian-nunez",
   "private": true,
   "scripts": {
     "start": "npm run bootstrap && start-storybook -p 6006",

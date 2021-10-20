@@ -6,7 +6,7 @@ All components include `<Wizard />` and `<Step />`.
 
 Both components can be imported like below.
 ```javascript
-import { Wizard, Step } from '@echon/components';
+import { Wizard, Step } from '@brian-nunez/components';
 ```
 
 ### Wizard Component
