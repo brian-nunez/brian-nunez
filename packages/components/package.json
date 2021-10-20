@@ -22,5 +22,21 @@
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^10.0.27",
     "react-icons": "^4.3.1"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/brian-nunez/echon.git"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "emotion"
+  ],
+  "bugs": {
+    "url": "https://github.com/brian-nunez/echon/issues"
+  },
+  "homepage": "https://github.com/brian-nunez/echon#readme"
 }
