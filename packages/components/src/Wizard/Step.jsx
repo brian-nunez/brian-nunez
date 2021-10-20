@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useWizardContext } from './Wizard';
+import { useWizardContext } from './context';
 
 function Step({
   children,

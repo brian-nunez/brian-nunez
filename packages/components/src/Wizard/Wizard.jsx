@@ -1,18 +1,7 @@
-import React, { createContext, useReducer, useContext } from 'react';
+import React, { useReducer } from 'react';
+import { WizardContext, useWizardContext } from './context';
 import reducer, { initialState } from './reducer';
 import Step from './Step';
-
-const WizardContext = createContext({});
-
-export function useWizardContext() {
-  const context = useContext(WizardContext);
-
-  if (!context) {
-    throw new Error('Wizard context is undefined, make sure component is within the wizard component');
-  }
-
-  return context;
-}
 
 export function useWizard() {
   const [state, dispatch] = useReducer(reducer, initialState);
