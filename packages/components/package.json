@@ -18,6 +18,7 @@
   },
   "devDependencies": {},
   "dependencies": {
+    "@emotion/core": "^10.1.1",
     "@emotion/css": "^10.0.27",
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^10.0.27",
