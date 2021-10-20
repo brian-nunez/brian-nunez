@@ -1,6 +1,6 @@
 {
   "name": "@brian-nunez/components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Component Library",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
@@ -13,10 +13,9 @@
   "author": "Brian Nunez",
   "license": "MIT",
   "peerDependencies": {
-    "react": "^17.0.2",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2"
   },
-  "devDependencies": {},
   "dependencies": {
     "@emotion/core": "^10.1.1",
     "@emotion/css": "^10.0.27",
