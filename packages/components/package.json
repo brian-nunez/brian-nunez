@@ -1,6 +1,6 @@
 {
   "name": "@brian-nunez/components",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React Component Library",
   "main": "lib/index.ts",
   "typings": "lib/index.d.ts",
