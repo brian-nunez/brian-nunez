@@ -1,14 +1,15 @@
 import React, { useReducer } from 'react';
 import { WizardContext, useWizardContext } from './context';
+import type { WizardContextType } from './context';
 import reducer, { initialState } from './reducer';
 import Step from './Step';
 
-export function useWizard() {
+export function useWizard(): WizardContextType {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const next = () => dispatch({ type: 'NEXT' });
   const previous = () => dispatch({ type: 'PREVIOUS' });
-  const goto = (step) => {
+  const goto = (step: number) => {
     if (typeof step !== 'number') {
       throw new TypeError('`Wizard` function goto only accepts a number.');
     }
@@ -25,15 +26,22 @@ export function useWizard() {
   return context;
 }
 
-function Wizard({ children }) {
+interface WizardProps {
+  children: React.ReactElement<any, string | React.JSXElementConstructor<any>>;
+};
+
+const Wizard: React.FC<WizardProps> = ({ children }) => {
   const wizardBag = useWizard();
 
   return (
     <WizardContext.Provider value={{ ...wizardBag }}>
       <WizardContext.Consumer>
-        {context => (
+        {(context: WizardContextType) => (
           React.Children.map(children, (child, idx) => {
-            if (![Step].includes(child.type)) {
+            if (!React.isValidElement(child)) {
+              return null;
+            }
+            if (Step !== child?.type) {
               throw new Error('Wizard children must only contain `Step` components');
             }
 

@@ -2,13 +2,13 @@
   "name": "@brian-nunez/components",
   "version": "1.0.1",
   "description": "React Component Library",
-  "main": "lib/cjs/index.js",
-  "module": "lib/esm/index.js",
+  "main": "lib/index.ts",
+  "typings": "lib/index.d.ts",
   "files": [
     "lib"
   ],
   "scripts": {
-    "build": "rimraf lib && rollup -c ../../rollup.config.js"
+    "build": "tsc -b"
   },
   "author": "Brian Nunez",
   "license": "MIT",
@@ -24,7 +24,8 @@
     "react-icons": "^4.3.1"
   },
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "test": "__tests__"
   },
   "repository": {
     "type": "git",

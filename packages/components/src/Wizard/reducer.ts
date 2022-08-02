@@ -2,9 +2,10 @@ export const initialState = {
   step: 0,
 };
 
-function reducer(state, action) {
-  const { type, payload } = action;
-  switch (type) {
+type Action = { type: 'NEXT' } | { type: 'PREVIOUS' } | { type: 'GOTO', payload: number };
+
+function reducer(state: typeof initialState, action: Action) {
+  switch (action.type) {
     case 'NEXT':
       return {
         ...state,
@@ -18,10 +19,10 @@ function reducer(state, action) {
     case 'GOTO':
       return {
         ...state,
-        step: payload,
+        step: action.payload,
       };
     default:
-      throw new Error(`Action ${action.type} does not exist`);
+      return { ...state };
   }
 }
 

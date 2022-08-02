@@ -1,8 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
-const Parallax = styled.div`
+const Parallax = styled.div<{ height?: string, backgroundImage?: string }>`
   background-image: url(${props => props.backgroundImage});
   min-height: ${props => props.height};
   max-height: ${props => props.height};
@@ -16,16 +14,6 @@ const Parallax = styled.div`
 
 Parallax.defaultProps = {
   height: '100%',
-};
-
-Parallax.propTypes = {
-  backgroundImage: PropTypes.string.isRequired,
-  height: PropTypes.string,
-  children: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.node,
-    PropTypes.func,
-  ]).isRequired,
 };
 
 Parallax.displayName = 'Parallax';

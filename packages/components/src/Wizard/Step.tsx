@@ -1,13 +1,28 @@
 import React, { useContext } from 'react';
 import { useWizardContext } from './context';
 
-function Step({
+interface RenderProps {
+  next: () => void;
+  previous: () => void;
+  goto: (index: number) => void;
+  step: number,
+}
+
+interface StepProps {
+  children: React.ReactNode;
+  onNext: () => void;
+  onPrevious: () => void;
+  onGoto: (index: number) => void;
+  render: (props: RenderProps) => React.ReactNode;
+}
+
+const Step: React.FC<StepProps> = ({
   children,
   render,
   onNext,
   onPrevious,
   onGoto,
-}) {
+}) => {
   const { next, previous, goto, step } = useWizardContext();
 
   if (!children && !render) {
@@ -28,14 +43,14 @@ function Step({
     previous();
   };
 
-  const handleGoto = async (number) => {
+  const handleGoto = async (number: number) => {
     if (typeof onGoto === 'function') {
       await onGoto(number);
     }
     goto(number);
   };
 
-  const props = {
+  const props: RenderProps = {
     next: handleNext,
     previous: handlePrevious,
     goto: handleGoto,
@@ -46,7 +61,11 @@ function Step({
     return render(props);
   }
 
-  return children(props);
+  if (typeof children === 'function') {
+    return children(props);
+  }
+
+  return null;
 }
 
 export default Step;
