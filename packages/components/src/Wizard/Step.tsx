@@ -9,11 +9,11 @@ interface RenderProps {
 }
 
 interface StepProps {
-  children: React.ReactNode;
-  onNext: () => void;
-  onPrevious: () => void;
-  onGoto: (index: number) => void;
-  render: (props: RenderProps) => React.ReactNode;
+  children?: React.ReactNode;
+  onNext?: () => void;
+  onPrevious?: () => void;
+  onGoto?: (index: number) => void;
+  render?: (props: RenderProps) => React.ReactNode;
 }
 
 const Step: React.FC<StepProps> = ({

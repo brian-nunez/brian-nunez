@@ -27,7 +27,7 @@ export function useWizard(): WizardContextType {
 }
 
 interface WizardProps {
-  children: React.ReactElement<any, string | React.JSXElementConstructor<any>>;
+  children: React.ReactNode;
 };
 
 const Wizard: React.FC<WizardProps> = ({ children }) => {

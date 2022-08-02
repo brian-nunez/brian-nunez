@@ -15,7 +15,7 @@ export default {
 };
 
 const Template = (args) => {
-  const [stepHistory, setStepHistory] = useState([]);
+  const [stepHistory, setStepHistory] = useState<string[]>([]);
   const add = payload => setStepHistory([...stepHistory, payload]);
 
   return (
